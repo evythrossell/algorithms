@@ -23,17 +23,24 @@ A tabela hash é a primeira estrutura de dados com uma lógica adicional, pois e
 </br>
   É importante que funções hash retornem o mesmo valor de saída quando o mesmo valor de entrada for inserido. Caso contrário, não será possível encontrar o item que você deseja na tabela hash.
   </br>
-  1. Quais destas funções hash são consistentes?
+  5. Quais destas funções hash são consistentes?
   </br>
-  1.1 f(x) = 1 (retorna "1" para qualquer entrada);
+  5.1 f(x) = 1 (retorna "1" para qualquer entrada);
   </br>
-  1.2 f(x) = rand() (retorna um número aleatório a cada execução);
+  Consistente.
   </br>
-  1.3 f(x) = proximo_espaco_vazio() (retorna o índice do próximo espaço livre da tabela hash);
+  5.2 f(x) = rand() (retorna um número aleatório a cada execução);
   </br>
-  1.4 f(x) = len(x) (usa o comprimento da string como índice).
+  Inconsistente.
   </br>
-  Resposta: 1 e 4.
+  5.3 f(x) = proximo_espaco_vazio() (retorna o índice do próximo espaço livre da tabela hash);
+  </br>
+  Inconsistente.
+  </br>
+  5.4 f(x) = len(x) (usa o comprimento da string como índice).
+  </br>
+  Consistente.
+  </br>
 </br>
 
 ## Usando tabelas hash para pesquisas
@@ -93,10 +100,16 @@ O cálculo é feito considerando o número de itens de uma tabela hash / número
   </br>
   Para cada um desses exemplos, qual função hash fornecerá uma boa distribuição? Considere que o tamanho da tabela hash tenha dez espaços.
   </br>
-  1.1 Uma lista telefônica em que as chaves são os nomes e os valores são os números telefônicos. Os nomes são os seguintes: Esther, Ben, Bob e Dan.
+  5.5 Uma lista telefônica em que as chaves são os nomes e os valores são os números telefônicos. Os nomes são os seguintes: Esther, Ben, Bob e Dan.
   </br>
-  1.2 Um mapeamento do tamanho de baterias e sua devida potência. Os tamanhos são A, AA, AAA e AAAA.
+  As funções hash C e D fornecerão uma boa distribuição.
   </br>
-  1.3 Um mapeamento de títulos de livros e autores. Os títulos são Maus, Fun Home e Watchmen.
+  5.6 Um mapeamento do tamanho de baterias e sua devida potência. Os tamanhos são A, AA, AAA e AAAA.
+  </br>
+  As funções hash B e D fornecerão uma boa distribuição.
+  </br>
+  5.7 Um mapeamento de títulos de livros e autores. Os títulos são Maus, Fun Home e Watchmen.
+  </br>
+  As funções hash B, C e D fornecerão uma boa distribuição.
   </br>
 </br>
