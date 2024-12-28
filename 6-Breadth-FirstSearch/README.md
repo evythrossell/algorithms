@@ -44,11 +44,17 @@ Caso seja procurado um vendedor de mangas em toda a rede, cada aresta (seta ou c
   </br>
   6.3 Quanto à essas três listas, marque se elas são válidas ou inválidas.
   </br>
-   A. Inválido.
+   A. 1. Acordar, 2. Tomar banho, 3. Tomar café da manhã, 4. Escovar os dentes.
   </br>
-   B. Válido.
+    Inválido.
   </br>
-   c. Inválido.
+   B. 1. Acordar, 2. Escovar os dentes, 3. Tomar café da manhã, 4. Tomar Banho.
+  </br>
+    Válido.
+  </br>
+   c. 1. Tomar banho, 2. Acordar, 3. Escovar os dentes, 4. Tomar café da manhã.
+  </br>
+    Inválido.
   </br>
   6.4 Aqui temos um grafo maior. Faça uma lista válida para ele.
   </br>
@@ -76,9 +82,11 @@ Suponha que há uma fila em um ponto de ônibus e que você está numa posição
   Execute o algoritmo de pesquisa em largura em cada um desses grafos para encontrar a solução.
   </br>
   6.1 Encontre o menor caminho do ínicio ao fim.
-  Resposta: O menor caminho possui 2 etapas.
+  </br>
+  O menor caminho possui 2 etapas.
   </br>
   6.2 Encontre o menor caminho de "jato" até "gato".
-  Resposta: Jato possui conexão direta com gato, sendo assim, somente uma etapa.
+  </br>
+  Jato possui conexão direta com gato, sendo assim, somente uma etapa.
   </br>
 </br>
