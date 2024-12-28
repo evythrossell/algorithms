@@ -12,6 +12,17 @@ Os algoritmos gulosos (algoritmos gananciosos) permitem definir a cada etapa, o 
 
 Para resolver o problema de maneira rápida, temos os algoritmos de aproximação.
 
+### Exercícios:
+</br>
+  8.1 Você trabalha para uma empresa de mobilías e tem de enviar os móveis para todo o país. É necessário encher seu caminhão com caixas, e todas as caixas são de tamanhos diferentes. Você está tentando maximizar o espaço que consegue usar em cada caminhão. Como escolheria as caixas para maximizar o espaço? Proponha uma solução gulosa. Ela lhe dará a solução ideal?
+  </br>
+  De acordo com o que foi visto para os algoritmos gulosos, um caminho seria escolher a maior caixa que cabe no espaço, repetindo até que não seja possível colocar nenhuma caixa. A solução ideal não será alcançada para esse tipo de problema, pois não estamos aplicando os algoritmos de aproximação.
+  </br>
+  8.2 Você está viajando para a Europa e tem sete dias para visitar o maior número de lugares. Para cada lugar, você atribui um valor (o quanto deseja ver) e estima quanto tempo demora. Como maximizar o total de pontos (passar por todos os lugares que você realmente quer ver) e estima quanto tempo demora. Como maximizar o total de pontos (passar por todos os lugares que você realmente quer ver) durante sua estadia? Proponha uma solução gulosa. Ela lhe dará a solução ideal?
+  </br>
+  Um caminho seria adotar os locais onde possuem maior pontuação e tempo disponível enquanto houver disponibilidade de tempo.
+</br>
+
 ### Algoritmos de aproximação
 Quando é necessário tempo para calcular a solução exata, os algoritmos de aproximação destaca-se por sua rapidez bem como a capacidade de chegar na solução ideal. Considerando o algoritmo guloso, não é de fácil compreensão e simples, por ter tempo de execução de O (n^2), onde n compreende o número de itens a serem percorridos.
 O que normalmente ocorre na prática é que é recebido um array inicial que é convertido em conjuntos (lista de itens que não são repetidos). Para cada item percorrido terá suas possibilidades de escolhas representadas em uma tabela hash para cada estação. Lembrando que os valores representados na tabela hash também são conjuntos que estão associados à uma chave (nome do vértice) e ajudam a compor o cálculo do conjunto final. Para chegarmos na resposta, deve-se escolher o conjunto que mais cobre os pontos, aplicado à teoria dos conjuntos. 
@@ -23,9 +34,15 @@ Em velocidade de execução, o algoritmo guloso tem tempo de execução de O (n^
   </br>
   8.3 Quicksort.
   </br>
+  Não.
+  </br>
   8.4 Pesquisa em largura.
   </br>
+  Não.
+  </br>
   8.5 Algoritmo de Dijkstra.
+  </br>
+  Sim, é um algoritmo guloso.
 </br>
 
 ### Problemas NP-completos
@@ -55,7 +72,13 @@ Falando de cálculo do caminho mínimo, se quiser encontrar um caminho que conec
 </br>
   8.6 Um carteiro deve entregar correspondências para vinte casas. Ele deve encontrar a rota mais curta que passe por todas as vinte casas. Esse é um problema de NP-completo?
   </br>
+  Sim.
+  </br>
   8.7 Encontrar o maior clique (em grafo não orientado é um subconjunto de seus vértices tais que cada dois vértices do subconjunto são conectados por uma aresta) em um conjunto de pessoas (conjunto de pessoas que todos se conhecem). Isso é um problema de NP-completo?
   </br>
+  Sim.
+  </br>
   8.8 Você está fazendo o mapa dos Estados Unidos e precisa colorir os estados adjacentes com cores diferentes. Para isso, deve encontrar o número mínimo de cores para que não existam dois estados adjacentes com a mesma cor. Isso é um problema NP-completo?
+  </br>
+  Sim.
 </br>
