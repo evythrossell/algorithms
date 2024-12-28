@@ -39,11 +39,20 @@ Já quando o pivô fica mais ao centro, a pilha de chamada fica reduzida quando 
   </br>
   4.5 Imprimir o valor de cada elemento em um array.
   </br>
+  O(n).
+  </br>
   4.6 Duplicar o valor de cada elemento em um array.
+  </br>
+  O(n).
   </br>
   4.7 Duplicar o valor apenas do primeiro elemento do array.
   </br>
+  O(1).
+  </br>
   4.8 Criar uma tabela de multiplicação com todos os elementos do array. Assim, caso o seu array seja [2, 3, 7, 8, 10], você primeiro multiplicará cada elemento por 2. Depois, multiplicará cada elemento por 3 e então por 7, e assim por diante.
+  </br>
+  O(n²).
+  </br>
 </br>
 
 ## Dividir para Conquistar
@@ -61,9 +70,34 @@ Quando falamos de programação funcional, existem linguagens de programação q
 </br>
   4.1 Escreva o código para a função soma, vista anteriormente.
   </br>
+  ```
+  def soma(lista):
+    if lista == [];
+       return 0
+    return lista[0] + soma(lista[1:])
+  ```
+  </br>
   4.2 Escreva uma função recursiva que conte o número de itens em uma lista.
+  </br>
+  ```
+  def conta(lista):
+    if lista == [];
+       return 0
+    return 1 + conta(lista[1:])
+  ```
   </br>
   4.3 Encontre o valor mais alto em uma lista.
   </br>
+   ```
+  def maximo(lista):
+    if len(lista) == 2;
+       return lista[0] if lista[0] > lista[1] else lista[1]
+    sub_max = maximo(lista[1:])
+    return lista[0] if lista[0] > sub_max else sub_max
+  ```
+  </br>
   4.4 Você se lembra da pesquisa binária no Capítulo 1? Ela também é um algoritmo do tipo dividir para conquistar. Você consegue determinar o caso-base e o caso recursivo para a pesquisa binária?
+  </br>
+  O caso-base para a pesquisa binária é um array com um item. Se o item que você está procurando combina com o item presente no array, você o encontrou. Caso contrário, ele não está no array.
+  </br>
 </br>
