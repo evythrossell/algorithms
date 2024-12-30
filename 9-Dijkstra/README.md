@@ -1,22 +1,16 @@
-<h1 align="center">
-  Estudo pessoal: Entendendo Algoritmos
-</h1>
-
-</br>
+# Estudo pessoal: Entendendo Algoritmos
 
 ## Algoritmo de Dijkstra
 Determina o caminho mínimo até X para grafos ponderados (atribuir pesos nas arestas). Quando há ciclos em grafos, o algoritmo de Djikstra não funciona. 
 Retomando o conceito de pesquisa em largura, em grafos de um ponto para o outro, pode ser adicionado um tempo de deslocamento entre os nós. Sendo assim, para calcular o caminho com menor número de etapas (arestas), poderá ser atendido com a pesquisa em largura, já o caminho mais rápido pode ser obtido por meio do algoritmo de Djikstra. As etapas que o algoritmo de Djikstra percorre estão listados abaixo:
 
-</br>
   1. Encontre o vértice mais "barato", pois será o nó que possibilitará chegar no menor tempo possível.
-</br>
+  </br>
   2. Verifique se há um caminho mais "barato" para os vizinhos desse vértice e atualize os custos dos vizinhos do vértice atual. 
-</br>
+  </br>
   3. Repita até que tenha feito isso para cada vértice do grafo. 
-</br>
+  </br>
   4. Calcule o caminho final.
-</br>
 
 Detalhando melhor o que ocorre após escolher o ponto mais próximo do ínicio e que tenha menos tempo de deslocamento, é realizada uma atualização de cálculo de custo para chegar em todos os vértices próximos ou vizinhos de qual estamos em menos tempo e reduzir o custo total. As etapas devem ser executadas recursivamente até chegarmos ao final do percurso.
 
@@ -55,10 +49,9 @@ Pensando em implementação, para representar os vizinhos do grafo, será compos
 Encerrar o algoritmo depois de estar completamente processados os vértices. 
 
 ### Caso médio e pior caso
-No pior caso, a complexidade do algoritmo Big O é de O(V² (número de vértices do grafo) + E (número de arestas no grafo)), já no médio caso é mais complexa a análise com exatidão, pois depende da distribuição dos pesos das arestas e estrutura do grafo. Geralmente, o desempenho no médio caso é próximo ao pior caso, especialmente em grafos mais densos.
+No pior caso, a complexidade do algoritmo Big O é de ```O(V² (número de vértices do grafo) + E (número de arestas no grafo))```, já no médio caso é mais complexa a análise com exatidão, pois depende da distribuição dos pesos das arestas e estrutura do grafo. Geralmente, o desempenho no médio caso é próximo ao pior caso, especialmente em grafos mais densos.
 
 ### Exercícios:
-</br>
   7.1 Em cada um desses grafos, qual é o peso do caminho mínimo do ínicio ao fim?
   </br>
   A. Início -> 5 -> 2 -> 1 -> Fim. Total: 8.
@@ -66,4 +59,3 @@ No pior caso, a complexidade do algoritmo Big O é de O(V² (número de vértice
   B. Início -> 10 -> 20 -> 30 -> Fim. Total: 60.
   </br>
   C. Ciclo de peso negativo.
-</br>

@@ -1,8 +1,4 @@
-<h1 align="center">
-  Estudo pessoal: Entendendo Algoritmos
-</h1>
-
-</br>
+# Estudo pessoal: Entendendo Algoritmos
 
 ## Recursão
 Aprender a separar um problema em um caso-base e um caso recursivo fazendo uso da estratégia dividir para conquistar quebra grandes problemas em pequenas soluções.
@@ -17,17 +13,16 @@ Quando utilizamos uma pilha para guardar variáveis de múltiplas funções é d
 ### Exercício:
   3.1 Suponha que eu forneça uma pilha de chamada como esta:
   Quais informações você pode retirar baseando-se apenas nessa pilha de chamada? Agora, vamos ver esta pilha de chamadas sendo executada com uma função recursiva. 
-</br>
-  • A função sauda é chamada primeiro, com nome = maggie.
-</br>
-  • Então, a função sauda chama sauda2, com nome = maggie.
-</br>
-  • Neste ponto, a função greet está em um estado incompleto e suspenso.
-</br> 
-  • A atual função de chamada é a função sauda2.
-</br> 
-  • Após esta função de chamada ser finalizada, a função sauda será retomada.
-</br> 
+  </br>
+  • A função ```sauda``` é chamada primeiro, com ```nome = maggie```.
+  </br>
+  • Então, a função ```sauda``` chama ```sauda2```, com ```nome = maggie```.
+  </br>
+  • Neste ponto, a função ```greet``` está em um estado incompleto e suspenso.
+  </br> 
+  • A atual função de chamada é a função ```sauda2```.
+  </br> 
+  • Após esta função de chamada ser finalizada, a função ```sauda``` será retomada.
 
 ### Pilha de chamada com reversão
 As funções recursivas também utilizam pilha de chamadas. Utilizar pilha é conveniente, mas pode custar muito espaço de memória. Cada uma das funções de chamada, ocupa um pouco de memória e quando a pilha está muito cheia é sinal que seu computador está salvando informações para muitas chamadas de funções, sendo possível: 
@@ -42,6 +37,5 @@ As funções recursivas também utilizam pilha de chamadas. Utilizar pilha é co
   </br>
   A pilha cresce eternamente. Cada programa tem uma quantidade limitada quantidade de espaço na pilha de chamada. Quando o seu programa fica sem espaço (o que eventualmente acontece), ele é finalizado com um erro de overflow (estouro) na pilha.
   </br>
-</br>
 
 

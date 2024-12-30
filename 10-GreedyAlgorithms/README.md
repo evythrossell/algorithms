@@ -1,8 +1,4 @@
-<h1 align="center">
-  Estudo pessoal: Entendendo Algoritmos
-</h1>
-
-</br>
+# Estudo pessoal: Entendendo Algoritmos
 
 ## Algoritmos Gulosos
 Os algoritmos gulosos (algoritmos gananciosos) permitem definir a cada etapa, o movimento ideal, selecionando a solução ideal e até obter a solução ideal global. Os algoritmos gulosos são simples de escrever e chegam perto da solução ótima, exceto os casos que atendem plenamente. O tipo de problema que os algoritmos gananciosos podem se encaixar bem são os problemas que envolvem conjuntos na tentativa de cortar custos, percorrendo os passos abaixo:
@@ -13,23 +9,20 @@ Os algoritmos gulosos (algoritmos gananciosos) permitem definir a cada etapa, o 
 Para resolver o problema de maneira rápida, temos os algoritmos de aproximação.
 
 ### Exercícios:
-</br>
   8.1 Você trabalha para uma empresa de mobilías e tem de enviar os móveis para todo o país. É necessário encher seu caminhão com caixas, e todas as caixas são de tamanhos diferentes. Você está tentando maximizar o espaço que consegue usar em cada caminhão. Como escolheria as caixas para maximizar o espaço? Proponha uma solução gulosa. Ela lhe dará a solução ideal?
-  </br>
+
   De acordo com o que foi visto para os algoritmos gulosos, um caminho seria escolher a maior caixa que cabe no espaço, repetindo até que não seja possível colocar nenhuma caixa. A solução ideal não será alcançada para esse tipo de problema, pois não estamos aplicando os algoritmos de aproximação.
-  </br>
+
   8.2 Você está viajando para a Europa e tem sete dias para visitar o maior número de lugares. Para cada lugar, você atribui um valor (o quanto deseja ver) e estima quanto tempo demora. Como maximizar o total de pontos (passar por todos os lugares que você realmente quer ver) e estima quanto tempo demora. Como maximizar o total de pontos (passar por todos os lugares que você realmente quer ver) durante sua estadia? Proponha uma solução gulosa. Ela lhe dará a solução ideal?
-  </br>
+
   Um caminho seria adotar os locais onde possuem maior pontuação e tempo disponível enquanto houver disponibilidade de tempo.
-</br>
 
 ### Algoritmos de aproximação
-Quando é necessário tempo para calcular a solução exata, os algoritmos de aproximação destaca-se por sua rapidez bem como a capacidade de chegar na solução ideal. Considerando o algoritmo guloso, não é de fácil compreensão e simples, por ter tempo de execução de O (n^2), onde n compreende o número de itens a serem percorridos.
+Quando é necessário tempo para calcular a solução exata, os algoritmos de aproximação destaca-se por sua rapidez bem como a capacidade de chegar na solução ideal. Considerando o algoritmo guloso, não é de fácil compreensão e simples, por ter tempo de execução de ```O(n^2)```, onde n compreende o número de itens a serem percorridos.
 O que normalmente ocorre na prática é que é recebido um array inicial que é convertido em conjuntos (lista de itens que não são repetidos). Para cada item percorrido terá suas possibilidades de escolhas representadas em uma tabela hash para cada estação. Lembrando que os valores representados na tabela hash também são conjuntos que estão associados à uma chave (nome do vértice) e ajudam a compor o cálculo do conjunto final. Para chegarmos na resposta, deve-se escolher o conjunto que mais cobre os pontos, aplicado à teoria dos conjuntos. 
-Em velocidade de execução, o algoritmo guloso tem tempo de execução de O (n^2) é mais rápido que o algoritmo exato de tempo de execução O (2^n).
+Em velocidade de execução, o algoritmo guloso tem tempo de execução de ```O(n^2)``` é mais rápido que o algoritmo exato de tempo de execução ```O(2^n)```.
 
 ### Exercícios:
-</br>
   8. Para cada um desses algoritmos, diga se ele é um algoritmo guloso ou não.
   </br>
   8.3 Quicksort.
@@ -43,13 +36,12 @@ Em velocidade de execução, o algoritmo guloso tem tempo de execução de O (n^
   8.5 Algoritmo de Dijkstra.
   </br>
   Sim, é um algoritmo guloso.
-</br>
 
 ### Problemas NP-completos
-É preciso calcular cada conjunto possível e isso deverá te fazer lembrar do problema do caixeiro-viajante que prevê visitar o menor caminho passando por todos os pontos somente uma vez de tempo de execução Big O de O(n!) ou tempo fatorial. Para um conjunto de pontos, defina:
+É preciso calcular cada conjunto possível e isso deverá te fazer lembrar do problema do caixeiro-viajante que prevê visitar o menor caminho passando por todos os pontos somente uma vez de tempo de execução Big O de ```O(n!)``` ou tempo fatorial. Para um conjunto de pontos, defina:
 
-1. Trace os diferentes caminhos entre dois pontos, resultando em possibilidades de caminhos em 2!.
-2. Ao adicionar o terceiro ponto, simule os trajetos possíveis totalizando 6!.
+1. Trace os diferentes caminhos entre dois pontos, resultando em possibilidades de caminhos em ```2!```.
+2. Ao adicionar o terceiro ponto, simule os trajetos possíveis totalizando ```6!```.
 3. Quando há um quarto ponto, os três primeiros pontos somam as possiblidades e para calcular o total seria: 4 (pontos de partida possíveis) * 6 (rotas possíveis para cada ponto de partida) = 24 rotas possíveis.
 
 É por isso que é impossível calcular a solução correta para o problema do caixeiro-viajante caso o número de pontos seja elevado. Alguns problemas são difíceis de resolver como o do caixeiro-viajante e a cobertura dos conjuntos que não possuem uma resolução rápida aparente. 
@@ -69,7 +61,6 @@ Falando de cálculo do caminho mínimo, se quiser encontrar um caminho que conec
 - Se for possível reescrever o problema somente com o problema de cobertura mínima ou problema do caixeiro-viajante.
 
 ### Exercícios:
-</br>
   8.6 Um carteiro deve entregar correspondências para vinte casas. Ele deve encontrar a rota mais curta que passe por todas as vinte casas. Esse é um problema de NP-completo?
   </br>
   Sim.
@@ -81,4 +72,3 @@ Falando de cálculo do caminho mínimo, se quiser encontrar um caminho que conec
   8.8 Você está fazendo o mapa dos Estados Unidos e precisa colorir os estados adjacentes com cores diferentes. Para isso, deve encontrar o número mínimo de cores para que não existam dois estados adjacentes com a mesma cor. Isso é um problema NP-completo?
   </br>
   Sim.
-</br>
