@@ -5,14 +5,14 @@ import (
 	"math"
 )
 
-func min(a, b int) int {
+func minimumValue(a, b int) int {
 	if a < b {
 		return a
 	}
 	return b
 }
 
-func max(a, b int) int {
+func maximumValue(a, b int) int {
 	if a > b {
 		return a
 	}
@@ -21,12 +21,12 @@ func max(a, b int) int {
 
 const (
 	MaximumArraySize       = 201
-	MaximumNumberOfRezises = 201
+	MaximumNumberOfResizes = 201
 )
 
-var t [MaximumArraySize][MaximumNumberOfRezises]int
+var t [MaximumArraySize][MaximumNumberOfResizes]int
 
-func solve(currentIndex, k int, nums []int) int {
+func calculateMinimumWastedSpace(currentIndex, k int, nums []int) int {
 	n := len(nums)
 	if currentIndex == n {
 		return 0
@@ -42,9 +42,9 @@ func solve(currentIndex, k int, nums []int) int {
 	totalElements := 0
 	minimumWastedSpace := math.MaxInt32
 	for endIndex := currentIndex; endIndex < n; endIndex++ {
-		maximumRequiredSize = max(maximumRequiredSize, nums[endIndex])
+		maximumRequiredSize = maximumValue(maximumRequiredSize, nums[endIndex])
 		totalElements += nums[endIndex]
-		minimumWastedSpace = min(minimumWastedSpace, maximumRequiredSize*(endIndex-currentIndex+1)-totalElements+solve(endIndex+1, k-1, nums))
+		minimumWastedSpace = minimumValue(minimumWastedSpace, maximumRequiredSize*(endIndex-currentIndex+1)-totalElements+calculateMinimumWastedSpace(endIndex+1, k-1, nums))
 	}
 	t[currentIndex][k] = minimumWastedSpace
 	return minimumWastedSpace
@@ -52,11 +52,11 @@ func solve(currentIndex, k int, nums []int) int {
 
 func minimumSpaceWastedResizing(nums []int, k int) int {
 	for currentIndex := 0; currentIndex < MaximumArraySize; currentIndex++ {
-		for endIndex := 0; endIndex < MaximumNumberOfRezises; endIndex++ {
+		for endIndex := 0; endIndex < MaximumNumberOfResizes; endIndex++ {
 			t[currentIndex][endIndex] = -1
 		}
 	}
-	return solve(0, k, nums)
+	return calculateMinimumWastedSpace(0, k, nums)
 }
 
 func main() {
